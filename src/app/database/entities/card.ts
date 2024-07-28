@@ -6,7 +6,7 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 
-@Entity('card')
+@Entity('cards')
 export class Card {
   @PrimaryGeneratedColumn('uuid')
   id!: string;

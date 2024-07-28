@@ -31,7 +31,10 @@
     "@ionic/angular": "^8.2.6",
     "@ionic/angular-server": "^8.2.6",
     "ionicons": "^7.0.0",
+    "jeep-sqlite": "^2.7.2",
+    "reflect-metadata": "^0.2.2",
     "rxjs": "~7.8.0",
+    "sql.js": "^1.10.3",
     "tslib": "^2.3.0",
     "typeorm": "^0.3.20",
     "zone.js": "~0.14.2"
@@ -49,6 +52,7 @@
     "@capacitor/cli": "6.1.1",
     "@ionic/angular-toolkit": "^11.0.1",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.57.0",
