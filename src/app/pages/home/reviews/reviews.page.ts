@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import mainDataSource from 'src/app/database/datasources/main';
-import { Card } from 'src/app/database/entities';
+import { CardDB } from 'src/app/services/db/card.service';
 
 @Component({
   selector: 'app-reviews',
@@ -8,23 +7,15 @@ import { Card } from 'src/app/database/entities';
   styleUrls: ['./reviews.page.scss'],
 })
 export class ReviewsPage implements OnInit {
-  connection = mainDataSource.dataSource;
-  cardRepository = this.connection.getRepository(Card);
   cards: any;
 
-  constructor() {}
+  constructor(private cardDB: CardDB) {}
 
   ngOnInit() {
     this.fetchCards();
   }
 
   async fetchCards() {
-    this.cards = await this.cardRepository.find();
-  }
-
-  async createCard() {
-    let card = new Card();
-    card.front = `Test ${Date.now()}`;
-    await this.cardRepository.save(card);
+    this.cards = await this.cardDB.find();
   }
 }
