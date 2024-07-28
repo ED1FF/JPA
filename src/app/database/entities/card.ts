@@ -12,5 +12,5 @@ export class Card {
   id!: string;
 
   @Column()
-  name!: string;
+  front!: string;
 }

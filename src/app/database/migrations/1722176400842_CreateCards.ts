@@ -5,7 +5,7 @@ export class CreateCards1722176400842 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `CREATE TABLE "cards" ("id" STRING PRIMARY KEY NOT NULL, "front" varchar NOT NULL)`
+      `CREATE TABLE "cards" ("id" varchar NOT NULL, "front" varchar NOT NULL)`
     );
   }
 

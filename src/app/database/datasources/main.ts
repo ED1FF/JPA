@@ -19,9 +19,9 @@ const dataSourceConfig: DataSourceOptions = {
 };
 
 export const dataSource = new DataSource(dataSourceConfig);
-const authorDataSource = {
+const mainDataSource = {
   dataSource: dataSource,
   dbName: Database.Name,
 };
 
-export default authorDataSource;
+export default mainDataSource;
