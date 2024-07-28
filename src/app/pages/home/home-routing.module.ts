@@ -11,9 +11,13 @@ const routes: Routes = [
     children: [
       {
         path: 'reviews',
-        component: ReviewsPage,
         loadChildren: () =>
           import('./reviews/reviews.module').then((m) => m.ReviewsPageModule),
+      },
+      {
+        path: 'stats',
+        loadChildren: () =>
+          import('./stats/stats.module').then((m) => m.StatsPageModule),
       },
       {
         path: '',
